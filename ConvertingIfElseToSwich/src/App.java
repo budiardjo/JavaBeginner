@@ -20,11 +20,17 @@ public class App {
 		switch(input) {
 		case 1:
 			System.out.println("Hello");
+			break;
 		case 2:
 			System.out.println("How are you?");
+			break;
+		case 100:
+			System.out.println("awawawawwawa");
+			break;
 		case 3:
 			System.out.println("Existing...");
 			System.exit(0);
+			break;
 		default:
 			System.out.println("Invalid option....");
 			break;
