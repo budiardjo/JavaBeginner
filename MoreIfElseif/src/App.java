@@ -35,7 +35,8 @@ public class App {
 		}
 		
 		while ( input > 10) {
-			System.out.println("you are doint it wrong, try agian");
+			
+			System.out.println("you are doint it wrong, try again");
 		}
 	}
 
