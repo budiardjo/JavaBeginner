@@ -11,10 +11,13 @@ public class App {
 		person2.name = "mare";
 		person2.age =  20 ;
 		
+		
+		
 		System.out.println(person1.name);
 		System.out.println(person1.age);
 		System.out.println(person2.name);
 		System.out.println(person2.age);
+		person1.sayHello();
 	}
 
 }
