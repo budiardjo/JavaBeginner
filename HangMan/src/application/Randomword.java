@@ -23,19 +23,19 @@ public class Randomword {
 	
 	public String toString() {
 		
-		String text = "";
+		StringBuilder sb = new StringBuilder();
 		
 		for (char c: characters) {
 			if (c == '\u0000') {
-				text += ('_');
+				sb.append('_');
 			}
 			else {
-				text += c;
+				sb.append(c);
 			}
-			text += (' ');
+			sb.append(' ');
 		}
 		
-		return text;
+		return sb.toString();
 	}
 	
 	
