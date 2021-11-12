@@ -1,5 +1,7 @@
 package application;
 
+import java.util.Random;
+
 /*
  * y father’s family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip. So, I called myself Pip, and came to be called Pip.
 
@@ -10,9 +12,16 @@ I give Pirrip as my father’s family name, on the authority of his tombstone and 
 
 public class Randomword {
 	private String[] words = {"family", "never", "belief", "taken" , "existence", "indebted", " Wife", "freckled", "grave" , "exceedingly", "struggle"};
+	private String chosenWord;
+	private Random random = new Random();
+	
+	
+	public Randomword() {
+		chosenWord = words[random.nextInt(words.length)];
+	}
 	
 	public String toString() {
-		return words[0];
+		return chosenWord;
 	}
 	
 	
