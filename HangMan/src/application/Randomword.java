@@ -14,14 +14,28 @@ public class Randomword {
 	private String[] words = {"family", "never", "belief", "taken" , "existence", "indebted", " Wife", "freckled", "grave" , "exceedingly", "struggle"};
 	private String chosenWord;
 	private Random random = new Random();
-	
+	private char[] characters;
 	
 	public Randomword() {
 		chosenWord = words[random.nextInt(words.length)];
+		characters = new char[chosenWord.length()]; 
 	}
 	
 	public String toString() {
-		return chosenWord;
+		
+		String text = "";
+		
+		for (char c: characters) {
+			if (c == '\u0000') {
+				text += ('_');
+			}
+			else {
+				text += c;
+			}
+			text += (' ');
+		}
+		
+		return text;
 	}
 	
 	
