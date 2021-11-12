@@ -25,8 +25,6 @@ public class Randomword {
 		
 		StringBuilder sb = new StringBuilder();
 		
-		characters[3] = 'x';
-		
 		for (char c: characters) {
 			sb.append(c == '\u0000' ? '_': c);
 			sb.append(' ');
@@ -34,4 +32,29 @@ public class Randomword {
 		
 		return sb.toString();
 	}
+
+	public boolean isCompleted() {
+		for(char c: characters) {
+			if(c == '\u0000') {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean addGuess(char c) {
+		
+		boolean correct = false; 
+		
+		for (int i=0; i<chosenWord.length(); i++) {
+			if(c == chosenWord.charAt(i)) {
+				characters [i] = c;
+				correct = true;
+			}
+		}
+		return correct;
+	}
+	
+	
+	
 }

@@ -6,6 +6,7 @@ public class App {
 		// TODO Auto-generated method stub
 			Hangman game = new Hangman();
 			game.run();
+			game.close();
 	}
 
 }
