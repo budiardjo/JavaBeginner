@@ -25,18 +25,13 @@ public class Randomword {
 		
 		StringBuilder sb = new StringBuilder();
 		
+		characters[3] = 'x';
+		
 		for (char c: characters) {
-			if (c == '\u0000') {
-				sb.append('_');
-			}
-			else {
-				sb.append(c);
-			}
+			sb.append(c == '\u0000' ? '_': c);
 			sb.append(' ');
 		}
 		
 		return sb.toString();
 	}
-	
-	
 }
