@@ -6,9 +6,19 @@ public class Cat {
 	private static int count = 0;
 	private int id;
 	
+	static double averageHeight;
+	
+	static {
+		averageHeight = 215/7.0;
+		System.out.println("Hello");
+	}
+	
 	
 	public Cat(String name) {
 		this.name = name;
+		
+		id = count;
+		
 		count++;
 	}
 
